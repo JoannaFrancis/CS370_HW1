@@ -73,5 +73,27 @@ int get_arr_size(int rand)
  */
 int get_running_count()
 {
-    // TODO: Implement this method.
+    int running_count = 0;
+    int iteration_count = get_iteration_count(rand()); //generate the number of iterations
+
+    for(int i = 0; i < iteration_count; i++){ 
+        
+        int array_size = get_arr_size(rand());//generate array size from random
+        
+        int *array = (int*)malloc(array_size * sizeof(int));// allocate memory for the array in heap
+        
+        for(int j = 0; j < array_size; j++){
+            array[j] = rand(); //populate array using random numbers
+        }
+        
+        int med = return_median(array, array_size); //get median of array
+        
+        if(med % 13 ==0){
+            running_count++; //if divisible by 13 add to running count
+        }
+      
+        free(array); //deallocate memory
+    }
+    
+    return running_count; //return final count of median numbers divisble by 13
 }
