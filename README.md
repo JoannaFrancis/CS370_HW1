@@ -5,15 +5,16 @@ Included: Driver.c MemoryManager.C MemoryManager.H Makefile
 Requirements: Command-line integer arg
 
 **Overview**
-This project takes a seed number from the command line to intialize random number generation and outputs the seed number, number of iterations and the running count which is generated in the MemoryManager.C file
+This project takes a seed number from the command line to intialize random number generation and outputs the seed number, number of iterations and the running count of array medians that were divisible by 13 which is generated in the MemoryManager.C file
 
 **Files**
 Driver.c
     Sets memory limits
     Initializes random number generation
     Calls get_running_count() from MemoryManager.c
+    Prints seed number and running count once returned
 MemoryManager.c
-    Generates number of iterations
+    Generates and prints number of iterations
     Allocates memory for randomly sized array 
     Fills, Sorts and finds median of array
     Counts number of medians divisible by 13

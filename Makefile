@@ -1,6 +1,6 @@
 CC=gcc
 FILES=Driver.c MemoryManager.c
-OUT_EXE=program.out 
+OUT_EXE=Driver
 
 all: $(OUT_EXE)
 
